@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
+import Blog from './components/Blog/Blog';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import Header from './components/Header/Header';
 import Quiz from './components/Quiz/Quiz';
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
         path:'statistics',
         loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
         element:<Statistics/>
+      },
+      {
+        path:'blog',
+        element:<Blog/>
       }
     ]
   }
