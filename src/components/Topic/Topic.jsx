@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Topic = ({topic}) => {
     return (
@@ -11,13 +12,13 @@ const Topic = ({topic}) => {
           <p className="mb-3 text-sm text-gray-900">
             Quiz Quantity: {topic.total}
           </p>
-          <a
-            href="/"
+          <Link
+            to={`/topic/${topic.id}`}
             aria-label=""
             className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800 bg-blue-500 p-2 rounded-lg text-white"
           >
             Start Quiz
-          </a>
+          </Link>
         </div>
         
     );
