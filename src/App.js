@@ -1,4 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import Header from './components/Header/Header';
@@ -33,9 +35,11 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <RouterProvider router={router}>
-
-    </RouterProvider>
+    <>
+    <RouterProvider router={router}/>
+      <ToastContainer position="top-center" autoClose={1000}/>
+    </>
+    
   );
 }
 
