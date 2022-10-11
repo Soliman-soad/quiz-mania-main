@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Nav = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
-        <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 shadow-lg sticky top-0 bg-white">
+        <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 shadow-lg sticky top-0 bg-white z-10">
         <div className="relative flex items-center justify-between">
           
           <Link

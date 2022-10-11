@@ -5,7 +5,7 @@ import Nav from '../components/Nav/Nav';
 
 const Main = () => {
     return (
-        <div>
+        <div >
             <Nav/>
             <Outlet/>
             <Footer/>
