@@ -13,7 +13,7 @@ const Question = ({question}) => {
     const handleAnswer =() => { return setShow(!show)};
     return (
         <div className='bg-gray-100 p-5 m-5 relative'>
-            <h3 className='text-2xl font-bold'>Q.{question.question}</h3>
+            <h3 className='text-2xl font-bold'>Q.{question.question.replace(/(<([^>]+)>)/ig,'')}</h3>
             <div className='md:grid grid-cols-2 gap-3 m-4'>
                 {
                     question.options.map(option => <div key={question.options.indexOf(option) } onClick={() => handleClick(option)} className='p-3 shadow-sm border-2 hover:bg-blue-400 hover:text-white cursor-pointer'>{option}</div>)
